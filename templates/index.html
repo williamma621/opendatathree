@@ -1,0 +1,17 @@
+<!-- The html stuff goes here -->
+{% load static %}
+<!Doctype html>
+<html>
+    <head></head>
+    <body>
+
+        {% for build in buildings %}
+        <ul>
+            <li>{{build.longitude}}</li>
+            <li>{{build.latitude}}</li>
+            <li>{{build.nameC}}</li>
+            <br>
+        </ul>
+        {% endfor %}
+    </body>
+</html>
