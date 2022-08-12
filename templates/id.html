@@ -1,0 +1,13 @@
+<!-- The html stuff goes here -->
+{% load static %}
+<!Doctype html>
+<html>
+    <head></head>
+    <body>
+        <a href="{% url 'index' %}"><button>返回主页</button></a>
+        <p style="text-align:center">建筑ID</p>
+        {% for build in buildings %}
+        <p>{{build.id}}: {{build.nameC}}</p>
+        {% endfor %}
+    </body>
+</html>
