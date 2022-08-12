@@ -32,7 +32,5 @@ def click_translate(request):
 def click_display_id(request):
 
   # one line of code rendering a new html file with /id
-
-  buildings.append()
   
-  return render(request, 'id.html', {'buildings': buildings})
+  return render(request, 'id.html', {'buildings': get_buildings()})
