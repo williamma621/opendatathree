@@ -1,5 +1,6 @@
-# from django.db import models
-from .buildings import buildings
+from django.db import models
+# from .buildings_old import buildings
+import buildings_old
 
 # Create your models here.
 
@@ -25,7 +26,7 @@ def translate(lis):
 def get_buildings():
   res = []
 
-  for idx, i in enumerate(buildings):
+  for idx, i in enumerate(buildings_old.buildings):
     build = Building()
     build.id = idx
     build.nameE = i['nameE']
@@ -42,6 +43,26 @@ def get_buildings():
 
   return res
 
+def write_file():
+  lis = get_buildings()
+  with open("../templates/buildings.tsv", 'w') as f:
+    for i in lis:
+      i.description = i.description.replace('\n', '^')
+      cur = [str(i.id), i.nameE, i.nameC, i.img, i.placeUri, i.uri, 
+      i.address, str(i.longitude), str(i.latitude), i.description, str(i.visited)]
+      cur = "\t".join(cur)
+      f.write(cur)
+      f.write("\n")
+
+def read_file():
+  with open("../templates/buildings.tsv", 'r') as f:
+    lines = f.readlines()
+    
+    for i in lines:
+      print(i)
+      print("________________________ new line here_________________")
+    print(len(lines), "is the length")
+
 
 if __name__ == "__main__":
-  get_buildings()
+  read_file()
