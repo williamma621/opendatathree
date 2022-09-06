@@ -1,6 +1,6 @@
 from django.db import models
-# from .buildings_old import buildings
-import buildings_old
+from .buildings_old import buildings
+# import buildings_old
 
 # Create your models here.
 
@@ -26,7 +26,7 @@ def translate(lis):
 def get_buildings():
   res = []
 
-  for idx, i in enumerate(buildings_old.buildings):
+  for idx, i in enumerate(buildings):
     build = Building()
     build.id = idx
     build.nameE = i['nameE']
