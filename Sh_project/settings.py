@@ -25,7 +25,7 @@ SECRET_KEY = 'kt-d-8_aw36fxg@p++r@_#0$b_yp8%#&l1f!n=$+gk-!j9@^ke'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','opendatacontest.herokuapp.com']
 
 
 # Application definition
