@@ -1,5 +1,5 @@
 from django.db import models
-from .buildings_old import buildings
+#from .buildings_old import buildings
 # import buildings_old
 
 # Create your models here.
