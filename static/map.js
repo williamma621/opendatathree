@@ -1,3 +1,4 @@
+console.log(1)
 var map = new BMapGL.Map('container'); //创造地图
 map.centerAndZoom(new BMapGL.Point(121.46223, 31.233143), 15); //设置地图中心点
 map.enableScrollWheelZoom(true); //启用鼠标滚轴缩放
